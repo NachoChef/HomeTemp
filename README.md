@@ -1,4 +1,4 @@
-# TemperatureSystem (Work in progress)
+# HomeTemp (Work in progress)
 A cheap, full home temperature monitoring solution.  
 
 ----
