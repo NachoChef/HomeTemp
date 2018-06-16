@@ -1,0 +1,18 @@
+package com.home.temperatureapi.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TemperatureController {
+
+    //todo add jpa repository
+
+    @RequestMapping(value = "/updateTemp/{room}/{temp}", method = RequestMethod.PUT)
+    public void updateTemp(@PathVariable("room") String room, @PathVariable("temp") String temp){
+        ;
+    }
+
+}
