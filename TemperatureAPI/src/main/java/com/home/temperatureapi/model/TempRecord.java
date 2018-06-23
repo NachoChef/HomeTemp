@@ -1,5 +1,6 @@
 package com.home.temperatureapi.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Data
+@Builder
 @Table(name = "temps")
 public class TempRecord {
     @Id
@@ -17,6 +19,9 @@ public class TempRecord {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "temp")
     private String temperature;
+
+    @Column(name = "room")
+    private String room;
 
     @Column(name = "create_time")
     private Timestamp createTimestamp;

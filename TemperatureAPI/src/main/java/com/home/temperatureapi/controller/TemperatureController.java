@@ -15,8 +15,10 @@ public class TemperatureController {
 
     @RequestMapping(value = "/updateTemp/{room}/{temp}", method = RequestMethod.PUT)
     public void updateTemp(@PathVariable("room") String room, @PathVariable("temp") String temp) {
-        TempRecord record = new TempRecord();
-        record.setTemperature(temp);
+        TempRecord record = TempRecord.builder()
+                .room(room)
+                .temperature(temp)
+                .build();
         //repository.save(record);
     }
 
