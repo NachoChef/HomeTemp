@@ -3,5 +3,5 @@ A cheap, full home temperature monitoring solution.
 
 ----
 
-ESP8266 with TMP36 sensors will gather a given location's temperature, and POST to a local RESTful API running on a Raspberry Pi. The data is then sent to a Grafana dashboard.
+ESP8266 with TMP36 sensors will gather a given location's temperature, and POST to a local RESTful API running on a Raspberry Pi. The data is then sent to a React frontend.
 
