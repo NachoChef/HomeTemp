@@ -8,8 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import lombok.Builder;
 import lombok.Data;
 
@@ -24,7 +22,6 @@ public class TempRecord {
   @Column(name = "id", updatable = false, nullable = false)
   private int id;
 
-  @Temporal(TemporalType.TIMESTAMP)
   @Column(name = "temp")
   private String temperature;
 
@@ -37,6 +34,5 @@ public class TempRecord {
   @PrePersist
   protected void onCreate() {
     createTimestamp = new Timestamp(System.currentTimeMillis());
-    ;
   }
 }

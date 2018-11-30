@@ -1,9 +1,11 @@
 package com.home.temperatureapi.controller;
 
+import com.home.temperatureapi.dto.RoomTempResponse;
 import com.home.temperatureapi.dto.UpdateRequest;
 import com.home.temperatureapi.model.TempRecord;
 import com.home.temperatureapi.repository.TemperatureRepository;
 import com.home.temperatureapi.service.CalculationsService;
+import java.util.Date;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -36,10 +38,8 @@ public class TemperatureController {
   }
 
   @RequestMapping(value = "/getTemp", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity getRoomTemp(@RequestParam("room") String room) {
-    String temp = "";
-    //temp = repository.findLastByRoom(room);
-    return ResponseEntity.ok(temp);
+  public ResponseEntity<RoomTempResponse> getRoomTemp(@RequestParam("room") String room) {
+    return ResponseEntity.ok(new RoomTempResponse());
   }
 
   private TempRecord buildRecordFromRequest(UpdateRequest request) {
