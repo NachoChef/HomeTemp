@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+LearnKotlin/.idea/kotlinc.xml
+LearnKotlin/.idea/libraries/KotlinJavaRuntime.xml
+LearnKotlin/.idea/misc.xml
+LearnKotlin/.idea/modules.xml
+LearnKotlin/.idea/workspace.xml
+LearnKotlin/LearnKotlin.iml
+LearnKotlin/out/production/LearnKotlin/demo/MainKt.class
+LearnKotlin/out/production/LearnKotlin/META-INF/LearnKotlin.kotlin_module
+LearnKotlin/src/main.kt
